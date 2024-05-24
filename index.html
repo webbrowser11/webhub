@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Development Learning Hub</title>
     <style>
-        /* Basic CSS Reset */
+        /* CSS Reset */
         * {
             margin: 0;
             padding: 0;
@@ -13,26 +13,28 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Open Sans', Arial, sans-serif;
+            background-color: #f0f0f0;
             color: #333;
             margin: 0;
             padding: 0;
         }
 
-        header {
-            background-color: #555;
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4CAF50;
             color: white;
             padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         nav {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 15px 0;
+            padding: 10px 0;
             position: sticky;
             top: 0;
             z-index: 10;
@@ -41,7 +43,7 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 10px;
             padding: 10px;
             display: inline-block;
             transition: background-color 0.3s;
@@ -55,9 +57,9 @@
         section {
             padding: 20px;
             margin: 20px;
-            background-color: white;
+            background-color: #fff;
             border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         footer {
@@ -71,13 +73,15 @@
         }
 
         body {
-            padding-bottom: 60px; /* Add space for footer */
+            padding-bottom: 50px; /* Add space for footer */
         }
     </style>
 </head>
 <body>
     <header>
-        <h1 style="margin: 0;">Web Development Learning Hub</h1>
+        <div class="header-container">
+            <h1>Web Development Learning Hub</h1>
+        </div>
     </header>
     <nav>
         <a href="#basics">Basics</a>
