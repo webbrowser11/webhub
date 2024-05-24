@@ -4,115 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Development Learning Hub</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 10px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        body {
+            padding-bottom: 50px; /* Add space for footer */
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="header-container">
             <h1>Web Development Learning Hub</h1>
-            <div class="language-switcher">
-                <button onclick="setLanguage('en')">English</button>
-                <button onclick="setLanguage('es')">Español</button>
-            </div>
         </div>
     </header>
     <nav>
-        <div class="nav-container">
-            <a href="#basics" data-en="Basics" data-es="Básicos">Basics</a>
-            <a href="#getting-domain" data-en="Getting a Domain" data-es="Obtener un Dominio">Getting a Domain</a>
-            <a href="#writing-code" data-en="Writing Code" data-es="Escribir Código">Writing Code</a>
-            <a href="#learn-more" data-en="Learn More" data-es="Aprender Más">Learn More</a>
-        </div>
+        <a href="#basics">Basics</a>
+        <a href="#getting-domain">Getting a Domain</a>
+        <a href="#writing-code">Writing Code</a>
+        <a href="#learn-more">Learn More</a>
     </nav>
     <section id="basics">
-        <h2 data-en="Basics" data-es="Básicos">Basics</h2>
-        <p data-en="Learn the fundamentals of web development, including HTML, CSS, and JavaScript. These are the building blocks of the web and understanding them is essential for creating any website or web application."
-           data-es="Aprenda los fundamentos del desarrollo web, incluidos HTML, CSS y JavaScript. Estos son los componentes básicos de la web y comprenderlos es esencial para crear cualquier sitio web o aplicación web.">
-            Learn the fundamentals of web development, including HTML, CSS, and JavaScript. These are the building blocks of the web and understanding them is essential for creating any website or web application.
-        </p>
+        <h2>Basics</h2>
+        <p>Learn the fundamentals of web development, including HTML, CSS, and JavaScript. These are the building blocks of the web and understanding them is essential for creating any website or web application.</p>
     </section>
     <section id="getting-domain">
-        <h2 data-en="Getting a Domain" data-es="Obtener un Dominio">Getting a Domain</h2>
-        <p data-en="Discover how to choose and register the perfect domain name for your website. Getting a domain involves several steps:"
-           data-es="Descubra cómo elegir y registrar el nombre de dominio perfecto para su sitio web. Obtener un dominio implica varios pasos:">
-            Discover how to choose and register the perfect domain name for your website. Getting a domain involves several steps:
-        </p>
+        <h2>Getting a Domain</h2>
+        <p>Discover how to choose and register the perfect domain name for your website. Getting a domain involves several steps:</p>
         <ol>
-            <li data-en="Brainstorm potential domain names that reflect your website's purpose or brand."
-                data-es="Haga una lluvia de ideas sobre posibles nombres de dominio que reflejen el propósito o la marca de su sitio web.">
-                Brainstorm potential domain names that reflect your website's purpose or brand.
-            </li>
-            <li data-en="Check the availability of your desired domain names using domain registration services like Namecheap or GoDaddy."
-                data-es="Verifique la disponibilidad de los nombres de dominio deseados utilizando servicios de registro de dominios como Namecheap o GoDaddy.">
-                Check the availability of your desired domain names using domain registration services like Namecheap or GoDaddy.
-            </li>
-            <li data-en="Once you've found an available domain name, register it through the chosen domain registrar."
-                data-es="Una vez que haya encontrado un nombre de dominio disponible, regístrelo a través del registrador de dominios elegido.">
-                Once you've found an available domain name, register it through the chosen domain registrar.
-            </li>
-            <li data-en="After registration, configure your domain's DNS settings to point to your web hosting provider."
-                data-es="Después del registro, configure los ajustes de DNS de su dominio para que apunten a su proveedor de alojamiento web.">
-                After registration, configure your domain's DNS settings to point to your web hosting provider.
-            </li>
-            <li data-en="If you're using GitHub Pages for hosting, follow these steps:"
-                data-es="Si está utilizando GitHub Pages para el alojamiento, siga estos pasos:">
-                If you're using GitHub Pages for hosting, follow these steps:
-            </li>
+            <li>Brainstorm potential domain names that reflect your website's purpose or brand.</li>
+            <li>Check the availability of your desired domain names using domain registration services like Namecheap or GoDaddy.</li>
+            <li>Once you've found an available domain name, register it through the chosen domain registrar.</li>
+            <li>After registration, configure your domain's DNS settings to point to your web hosting provider.</li>
+            <li>If you're using GitHub Pages for hosting, follow these steps:</li>
             <ul>
-                <li data-en="Create a new repository on GitHub with the name <code>username.github.io</code>, replacing <code>username</code> with your GitHub username."
-                    data-es="Cree un nuevo repositorio en GitHub con el nombre <code>username.github.io</code>, reemplazando <code>username</code> con su nombre de usuario de GitHub.">
-                    Create a new repository on GitHub with the name <code>username.github.io</code>, replacing <code>username</code> with your GitHub username.
-                </li>
-                <li data-en="Upload your website files to this repository, ensuring that your main HTML file is named <code>index.html</code>."
-                    data-es="Suba los archivos de su sitio web a este repositorio, asegurándose de que su archivo HTML principal se llame <code>index.html</code>.">
-                    Upload your website files to this repository, ensuring that your main HTML file is named <code>index.html</code>.
-                </li>
-                <li data-en="Your website will now be accessible at <code>http://username.github.io</code>."
-                    data-es="Su sitio web ahora será accesible en <code>http://username.github.io</code>.">
-                    Your website will now be accessible at <code>http://username.github.io</code>.
-                </li>
+                <li>Create a new repository on GitHub with the name <code>username.github.io</code>, replacing <code>username</code> with your GitHub username.</li>
+                <li>Upload your website files to this repository, ensuring that your main HTML file is named <code>index.html</code>.</li>
+                <li>Your website will now be accessible at <code>http://username.github.io</code>.</li>
             </ul>
         </ol>
     </section>
     <section id="writing-code">
-        <h2 data-en="Writing Code" data-es="Escribir Código">Writing Code</h2>
-        <p data-en="Explore best practices for writing clean, efficient, and maintainable code. Writing good code is crucial for creating scalable and robust web applications. Some tips for writing high-quality code include:"
-           data-es="Explore las mejores prácticas para escribir código limpio, eficiente y mantenible. Escribir buen código es crucial para crear aplicaciones web escalables y robustas. Algunos consejos para escribir código de alta calidad incluyen:">
-            Explore best practices for writing clean, efficient, and maintainable code. Writing good code is crucial for creating scalable and robust web applications. Some tips for writing high-quality code include:
-        </p>
+        <h2>Writing Code</h2>
+        <p>Explore best practices for writing clean, efficient, and maintainable code. Writing good code is crucial for creating scalable and robust web applications. Some tips for writing high-quality code include:</p>
         <ul>
-            <li data-en="Follow consistent coding conventions and style guidelines."
-                data-es="Siga convenciones de codificación consistentes y pautas de estilo.">
-                Follow consistent coding conventions and style guidelines.
-            </li>
-            <li data-en="Use meaningful variable and function names to enhance code readability."
-                data-es="Use nombres de variables y funciones significativos para mejorar la legibilidad del código.">
-                Use meaningful variable and function names to enhance code readability.
-            </li>
-            <li data-en="Comment your code to explain its purpose and functionality."
-                data-es="Comente su código para explicar su propósito y funcionalidad.">
-                Comment your code to explain its purpose and functionality.
-            </li>
-            <li data-en="Regularly refactor your code to improve its structure and performance."
-                data-es="Refactorice su código regularmente para mejorar su estructura y rendimiento.">
-                Regularly refactor your code to improve its structure and performance.
-            </li>
-            <li data-en="Adopt version control systems like Git to track changes and collaborate with other developers."
-                data-es="Adopte sistemas de control de versiones como Git para realizar un seguimiento de los cambios y colaborar con otros desarrolladores.">
-                Adopt version control systems like Git to track changes and collaborate with other developers.
-            </li>
+            <li>Follow consistent coding conventions and style guidelines.</li>
+            <li>Use meaningful variable and function names to enhance code readability.</li>
+            <li>Comment your code to explain its purpose and functionality.</li>
+            <li>Regularly refactor your code to improve its structure and performance.</li>
+            <li>Adopt version control systems like Git to track changes and collaborate with other developers.</li>
         </ul>
     </section>
     <section id="learn-more">
-        <h2 data-en="Learn More" data-es="Aprender Más">Learn More</h2>
-        <p data-en="Ready to dive deeper into web development? Check out <a href='https://web.dev' target='_blank'>web.dev</a> for comprehensive resources and tutorials. Web.dev offers a wide range of articles, guides, and interactive courses covering various aspects of web development, from beginner to advanced topics."
-           data-es="¿Listo para profundizar en el desarrollo web? Consulte <a href='https://web.dev' target='_blank'>web.dev</a> para obtener recursos y tutoriales completos. Web.dev ofrece una amplia gama de artículos, guías y cursos interactivos que cubren varios aspectos del desarrollo web, desde temas para principiantes hasta avanzados.">
-            Ready to dive deeper into web development? Check out <a href='https://web.dev' target='_blank'>web.dev</a> for comprehensive resources and tutorials. Web.dev offers a wide range of articles, guides, and interactive courses covering various aspects of web development, from beginner to advanced topics.
-        </p>
+        <h2>Learn More</h2>
+        <p>Ready to dive deeper into web development? Check out <a href="https://web.dev" target="_blank">web.dev</a> for comprehensive resources and tutorials. Web.dev offers a wide range of articles, guides, and interactive courses covering various aspects of web development, from beginner to advanced topics.</p>
     </section>
     <footer>
         <p>&copy; 2024 Alter Net Codes</p>
     </footer>
-    <script src="scripts.js"></script>
 </body>
 </html>
